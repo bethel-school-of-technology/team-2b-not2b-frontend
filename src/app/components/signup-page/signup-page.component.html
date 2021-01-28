@@ -1,1 +1,38 @@
-<p>signup-page works!</p>
+
+<mat-card>
+
+    <mat-card-title>Sign Up</mat-card-title>
+    
+      <mat-form-field appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input matInput placeholder="First Name" required />
+      </mat-form-field>
+    
+      <mat-form-field appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input matInput placeholder="Last Name" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Username" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" placeholder="Password" required />
+    </mat-form-field>
+    
+    <!-- CHANGE THIS BUTTON AFTER DATA LOGIC IS APPLIED TO FORM -->
+    <button mat-raised-button color="primary" routerLink="/decision-page">Sign Up</button>
+      
+    </mat-card>
+
+    <router-outlet></router-outlet>
+    
+    

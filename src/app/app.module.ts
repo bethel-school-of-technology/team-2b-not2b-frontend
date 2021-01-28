@@ -1,6 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { AppRoutingModule } from './app-routing.module';
+
 
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
@@ -18,6 +26,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { HeaderComponent } from './components/header/header.component';
+import { DecisionPageComponent } from './components/decision-page/decision-page.component';
+
 
 const routes: Routes = [
   {path:'tanjiro', component: DashboardComponent}
@@ -31,6 +42,8 @@ const routes: Routes = [
     SignupPageComponent,
     NavComponent,
     DashboardComponent
+    HeaderComponent,
+    DecisionPageComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +58,12 @@ const routes: Routes = [
     MatCardModule,
     MatMenuModule,
     RouterModule.forRoot(routes)
+    MatInputModule,
+    MatFormFieldModule,
+    MatCardModule,
+    MatButtonModule,
+    MatToolbarModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
