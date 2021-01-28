@@ -5,6 +5,7 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import { SignupPageComponent } from './components/signup-page/signup-page.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { DecisionPageComponent } from './components/decision-page/decision-page.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'decision-page',
     component: DecisionPageComponent
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent
   },
   {
     path: '',
