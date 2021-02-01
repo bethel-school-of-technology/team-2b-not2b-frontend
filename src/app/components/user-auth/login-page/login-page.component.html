@@ -1,0 +1,22 @@
+<mat-card>
+  <mat-card-title>Login</mat-card-title>
+  <form (submit)="onLogin(loginForm)" #loginForm="ngForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput name="email" ngModel type="email" placeholder="E-mail" #emailInput="ngModel" required email>
+      <mat-error *ngIf="emailInput.invalid">Please enter a valid Username</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" name="password" ngModel placeholder="Password" #passwordInput="ngModel" required />
+      <mat-error *ngIf="passwordInput.invalid">Please enter a valid password.</mat-error>
+    </mat-form-field>
+
+    <!-- CHANGE THIS BUTTON AFTER DATA LOGIC IS APPLIED TO FORM -->
+    <!-- <button mat-raised-button color="primary" routerLink="/decision-page">Login</button> -->
+    <button mat-raised-button color="primary" type="submit">Login</button>
+  </form>
+</mat-card>
+
+<!-- <router-outlet></router-outlet> -->
