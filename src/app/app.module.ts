@@ -14,13 +14,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
-import { LoginPageComponent } from './components/login-page/login-page.component';
-import { SignupPageComponent } from './components/signup-page/signup-page.component';
+import { LoginPageComponent } from './components/user-auth/login-page/login-page.component';
+import { SignupPageComponent } from './components/user-auth/signup-page/signup-page.component';
 import { NavComponent } from './nav/nav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -60,7 +63,9 @@ const routes: Routes = [
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

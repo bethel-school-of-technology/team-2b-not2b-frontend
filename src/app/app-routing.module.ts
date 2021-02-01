@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginPageComponent } from './components/login-page/login-page.component';
-import { SignupPageComponent } from './components/signup-page/signup-page.component';
+import { LoginPageComponent } from './components/user-auth/login-page/login-page.component';
+import { SignupPageComponent } from './components/user-auth/signup-page/signup-page.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { DecisionPageComponent } from './components/decision-page/decision-page.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
