@@ -14,6 +14,9 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import { SignupPageComponent } from './components/signup-page/signup-page.component';
 import { HeaderComponent } from './components/header/header.component';
 import { DecisionPageComponent } from './components/decision-page/decision-page.component';
+import { SkillTanjiroComponent } from './components/skill-tanjiro/skill-tanjiro.component';
+import { SkillNezukoComponent } from './components/skill-nezuko/skill-nezuko.component';
+import { SkillKamadoComponent } from './components/skill-kamado/skill-kamado.component';  
 
 
 
@@ -24,7 +27,10 @@ import { DecisionPageComponent } from './components/decision-page/decision-page.
     LoginPageComponent,
     SignupPageComponent,
     HeaderComponent,
-    DecisionPageComponent
+    DecisionPageComponent,
+    SkillTanjiroComponent,
+    SkillNezukoComponent,
+    SkillKamadoComponent
   ],
   imports: [
     BrowserModule,
