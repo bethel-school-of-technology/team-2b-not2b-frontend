@@ -34,9 +34,6 @@ import { SkillKamadoComponent } from './components/skill-kamado/skill-kamado.com
 import { YouTubePlayerModule } from "@angular/youtube-player";
 
 
-const routes: Routes = [
-  {path:'tanjiro', component: DashboardComponent}
-];
 
 @NgModule({
   declarations: [
@@ -65,7 +62,7 @@ const routes: Routes = [
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
-    RouterModule.forRoot(routes),
+    RouterModule,
     MatInputModule,
     MatFormFieldModule,
     MatCardModule,
