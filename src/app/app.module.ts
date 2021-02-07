@@ -29,11 +29,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './components/header/header.component';
 import { DecisionPageComponent } from './components/decision-page/decision-page.component';
 import { CardComponent } from './card/card.component';
+import { SkillTanjiroComponent } from './components/skill-tanjiro/skill-tanjiro.component';
+import { SkillNezukoComponent } from './components/skill-nezuko/skill-nezuko.component';
+import { SkillKamadoComponent } from './components/skill-kamado/skill-kamado.component';  
 
 
-const routes: Routes = [
-  {path:'tanjiro', component: DashboardComponent}
-];
 
 @NgModule({
   declarations: [
@@ -45,7 +45,10 @@ const routes: Routes = [
     DashboardComponent,
     HeaderComponent,
     DecisionPageComponent,
-    CardComponent
+    CardComponent,
+    SkillTanjiroComponent,
+    SkillNezukoComponent,
+    SkillKamadoComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +62,7 @@ const routes: Routes = [
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
-    RouterModule.forRoot(routes),
+    RouterModule,
     MatInputModule,
     MatFormFieldModule,
     MatCardModule,
