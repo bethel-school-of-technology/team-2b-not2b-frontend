@@ -6,11 +6,6 @@ mat-card-content {
     text-align: center;
 }
 
-youtube-player {
-    display: flex;
-    justify-content: center;    
-}
-
 button {
     margin: 5px;
 
