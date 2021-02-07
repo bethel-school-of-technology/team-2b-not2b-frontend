@@ -28,6 +28,7 @@ import { NavComponent } from './nav/nav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './components/header/header.component';
 import { DecisionPageComponent } from './components/decision-page/decision-page.component';
+import { CardComponent } from './card/card.component';
 
 
 const routes: Routes = [
@@ -43,7 +44,8 @@ const routes: Routes = [
     NavComponent,
     DashboardComponent,
     HeaderComponent,
-    DecisionPageComponent
+    DecisionPageComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
