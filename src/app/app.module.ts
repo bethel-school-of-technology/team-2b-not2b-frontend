@@ -30,9 +30,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { DecisionPageComponent } from './components/decision-page/decision-page.component';
 
 
-const routes: Routes = [
-  {path:'tanjiro', component: DashboardComponent}
-];
 
 @NgModule({
   declarations: [
@@ -57,7 +54,7 @@ const routes: Routes = [
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
-    RouterModule.forRoot(routes),
+    RouterModule,
     MatInputModule,
     MatFormFieldModule,
     MatCardModule,
