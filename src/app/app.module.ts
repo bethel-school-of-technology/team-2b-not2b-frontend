@@ -31,6 +31,7 @@ import { DecisionPageComponent } from './components/decision-page/decision-page.
 import { SkillTanjiroComponent } from './components/skill-tanjiro/skill-tanjiro.component';
 import { SkillNezukoComponent } from './components/skill-nezuko/skill-nezuko.component';
 import { SkillKamadoComponent } from './components/skill-kamado/skill-kamado.component';  
+import { YouTubePlayerModule } from "@angular/youtube-player";
 
 
 const routes: Routes = [
@@ -52,6 +53,7 @@ const routes: Routes = [
     SkillKamadoComponent
   ],
   imports: [
+    YouTubePlayerModule,
     BrowserModule,
     BrowserAnimationsModule,
     LayoutModule,
