@@ -28,6 +28,7 @@ import { NavComponent } from './nav/nav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './components/header/header.component';
 import { DecisionPageComponent } from './components/decision-page/decision-page.component';
+import { CardComponent } from './card/card.component';
 import { SkillTanjiroComponent } from './components/skill-tanjiro/skill-tanjiro.component';
 import { SkillNezukoComponent } from './components/skill-nezuko/skill-nezuko.component';
 import { SkillKamadoComponent } from './components/skill-kamado/skill-kamado.component';  
@@ -44,6 +45,7 @@ import { SkillKamadoComponent } from './components/skill-kamado/skill-kamado.com
     DashboardComponent,
     HeaderComponent,
     DecisionPageComponent,
+    CardComponent,
     SkillTanjiroComponent,
     SkillNezukoComponent,
     SkillKamadoComponent
