@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { User } from '../../models/user';
+import { UserService } from '../../services/user.service';
 
-import { AuthService } from '../auth.service';
+
 
 @Component({
   selector: 'app-signup-page',
@@ -10,16 +13,28 @@ import { AuthService } from '../auth.service';
 })
 export class SignupPageComponent implements OnInit {
 
-  constructor(public authService: AuthService) {}
+  newNinja: User = new User();
 
-  onSignup(form: NgForm) {
-    if (form.invalid) {
-      return;
-    }
-    this.authService.createUser(form.value.firstName, form.value.lastName, form.value.email, form.value.username, form.value.password);
+  constructor(private ninjaUserService: UserService, private myRouter: Router) {}
+
+
+  ngOnInit(): void {
   }
 
-  ngOnInit() {
+  signup() {
+    console.log(this.newNinja)
+    this.ninjaUserService.signupUser(this.newNinja).subscribe(ninjaResponseObject => {
+      console.log(ninjaResponseObject);
+      if(ninjaResponseObject.status === 200){
+        // Successful Signup
+        window.alert(ninjaResponseObject.message);
+        localStorage.setItem("ninjaToken", ninjaResponseObject.token);
+        this.myRouter.navigate(["/decision-page"]);
+      } else {
+        // Unsuccessful Signup
+        window.alert(ninjaResponseObject.message);
+      }
+    })
   }
 
 }

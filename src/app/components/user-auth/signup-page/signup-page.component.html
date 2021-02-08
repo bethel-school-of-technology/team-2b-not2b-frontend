@@ -1,80 +1,39 @@
-<!-- <mat-card>
-  <mat-card-title>Sign Up</mat-card-title>
-
-  <form >
-    <mat-form-field appearance="outline">
-      <mat-label>First Name</mat-label>
-      <input matInput placeholder="First Name" required />
-    </mat-form-field>
-
-    <mat-form-field appearance="outline">
-      <mat-label>Last Name</mat-label>
-      <input matInput placeholder="Last Name" required />
-    </mat-form-field>
-
-    <mat-form-field appearance="outline">
-      <mat-label>Email</mat-label>
-      <input matInput placeholder="Email" required />
-    </mat-form-field>
-
-    <mat-form-field appearance="outline">
-      <mat-label>Username</mat-label>
-      <input matInput placeholder="Username" required />
-    </mat-form-field>
-
-    <mat-form-field appearance="outline">
-      <mat-label>Password</mat-label>
-      <input matInput type="password" placeholder="Password" required />
-    </mat-form-field> -->
-
-    <!-- CHANGE THIS BUTTON AFTER DATA LOGIC IS APPLIED TO FORM -->
-    <!-- <button mat-raised-button color="primary" routerLink="/decision-page">
-      Sign Up
-    </button>
-  </form>
-</mat-card> -->
-
-<!--  -->
-
-
 <mat-card>
   <mat-card-title>Sign Up</mat-card-title>
-  <form (submit)="onSignup(signupForm)" #signupForm="ngForm">
+  <form (ngSubmit)="signup()">
 
     <mat-form-field appearance="outline">
       <mat-label>First Name</mat-label>
-      <input matInput name="firstName" ngModel type="text" placeholder="First Name" #firstNameInput="ngModel" required>
-      <mat-error *ngIf="firstNameInput.invalid">Please enter a valid Username</mat-error>
+      <input matInput name="firstName" type="text" placeholder="First Name" [(ngModel)]="newNinja.firstName" required>
+      <!-- <mat-error *ngIf="firstNameInput.invalid">Please enter a valid Username</mat-error> -->
     </mat-form-field>
 
     <mat-form-field appearance="outline">
       <mat-label>Last Name</mat-label>
-      <input matInput name="lastName" ngModel type="text" placeholder="Last Name" #lastNameInput="ngModel" required>
-      <mat-error *ngIf="lastNameInput.invalid">Please enter your last name</mat-error>
+      <input matInput name="lastName" type="text" placeholder="Last Name" [(ngModel)]="newNinja.lastName" required>
+      <!-- <mat-error *ngIf="lastNameInput.invalid">Please enter your last name</mat-error> -->
     </mat-form-field>
 
     <mat-form-field appearance="outline">
       <mat-label>Email</mat-label>
-      <input matInput name="email" ngModel type="email" placeholder="E-mail" #emailInput="ngModel" required email>
-      <mat-error *ngIf="emailInput.invalid">Please enter a valid Username</mat-error>
+      <input matInput name="email" type="email" placeholder="E-mail" [(ngModel)]="newNinja.email" required email>
+      <!-- <mat-error *ngIf="emailInput.invalid">Please enter a valid Username</mat-error> -->
     </mat-form-field>
 
     <mat-form-field appearance="outline">
       <mat-label>UserName</mat-label>
-      <input matInput name="username" ngModel type="text" placeholder="UserName" #usernameInput="ngModel" required>
-      <mat-error *ngIf="usernameInput.invalid">Please enter a username</mat-error>
+      <input matInput name="username" type="text" placeholder="UserName" [(ngModel)]="newNinja.username" required>
+      <!-- <mat-error *ngIf="usernameInput.invalid">Please enter a username</mat-error> -->
     </mat-form-field>
 
     <mat-form-field appearance="outline">
       <mat-label>Password</mat-label>
-      <input matInput type="password" name="password" ngModel placeholder="Password" #passwordInput="ngModel" required />
-      <mat-error *ngIf="passwordInput.invalid">Please enter a valid password.</mat-error>
+      <input matInput type="password" name="password" placeholder="Password" [(ngModel)]="newNinja.password" required />
+      <!-- <mat-error *ngIf="passwordInput.invalid">Please enter a valid password.</mat-error> -->
     </mat-form-field>
 
-    <!-- CHANGE THIS BUTTON AFTER DATA LOGIC IS APPLIED TO FORM -->
-    <!-- <button mat-raised-button color="primary" routerLink="/decision-page">Login</button> -->
     <button mat-raised-button color="primary" type="submit">Sign Up</button>
   </form>
 </mat-card>
 
-<!-- <router-outlet></router-outlet> -->
+

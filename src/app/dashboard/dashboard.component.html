@@ -1,22 +1,29 @@
 <!--dash.component.html-->
-<div class="grid-container">
+ <div class="grid-container">
   <h1 class="mat-h1">Dashboard</h1>
   <mat-grid-list cols="{{ ( cardLayout | async )?.columns }}" rowHeight="200px">
-      <!--Table-->
+      
       <mat-grid-tile [colspan]="( cardLayout | async )?.table.cols" [rowspan]="( cardLayout | async )?.table.rows">
         <app-card title="Card 9"><div>Table Content Here</div></app-card>
       </mat-grid-tile>
-    <!--Mini Cards-->
+    
     <mat-grid-tile *ngFor="let i of [1, 2]" [colspan]="( cardLayout | async )?.miniCard.cols"
       [rowspan]="( cardLayout | async )?.miniCard.rows">
       <app-card title="Card {{i}}"><div>Mini Card Content Here</div></app-card>
     </mat-grid-tile>
-    <!--Charts-->
+    
     <mat-grid-tile *ngFor="let i of [5, 6]" [colspan]="( cardLayout | async )?.chart.cols"
       [rowspan]="( cardLayout | async )?.chart.rows">
       <app-card title="Card {{i}}"><div>Chart Content Here</div></app-card>
     </mat-grid-tile>
   </mat-grid-list>
- </div>
-<!--<app-card></app-card>-->
-<router-outlet></router-outlet>
+
+
+
+<!-- JOSHUA EDITS -->
+<mat-card>
+  <mat-card-title>Ninja Profile</mat-card-title>
+  <mat-card-subtitle>Tanjiro Clan</mat-card-subtitle>
+  <mat-card-content>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque enim non repellendus numquam, accusamus sint quibusdam, perferendis ratione, iusto corrupti laboriosam? Reprehenderit ullam deleniti ducimus cum? Quae, eligendi ea! Nostrum.</mat-card-content>
+  
+</mat-card>

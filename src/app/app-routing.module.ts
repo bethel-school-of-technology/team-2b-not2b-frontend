@@ -11,43 +11,15 @@ import { SkillKamadoComponent } from './components/skill-kamado/skill-kamado.com
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
-  {
-    path: 'login-page',
-    component: LoginPageComponent
-  },
-  {
-    path: 'signup-page',
-    component: SignupPageComponent
-  },
-  {
-    path: 'landing-page',
-    component: LandingPageComponent
-  },
-  {
-    path: 'decision-page',
-    component: DecisionPageComponent
-  },
-  {
-    path: 'skill-tanjiro',
-    component: SkillTanjiroComponent
-  },
-  {
-    path: 'skill-nezuko',
-    component: SkillNezukoComponent
-  },
-  {
-    path: 'skill-kamado',
-    component: SkillKamadoComponent
-  },
-  {
-    path: 'dashboard',
-    component: DashboardComponent
-  },
-  {
-    path: '',
-    redirectTo: '/landing-page',
-    pathMatch: 'full'
-  }
+  { path: 'login-page', component: LoginPageComponent },
+  { path: 'signup-page', component: SignupPageComponent },
+  { path: 'landing-page', component: LandingPageComponent },
+  { path: 'decision-page', component: DecisionPageComponent },
+  { path: 'skill-tanjiro', component: SkillTanjiroComponent },
+  { path: 'skill-nezuko', component: SkillNezukoComponent },
+  { path: 'skill-kamado', component: SkillKamadoComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: '', redirectTo: '/landing-page', pathMatch: 'full' }
 ]
 
 @NgModule({
