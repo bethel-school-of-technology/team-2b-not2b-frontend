@@ -3,9 +3,9 @@ import { map } from "rxjs/operators";
 import { Breakpoints, BreakpointObserver } from "@angular/cdk/layout";
 import { User } from "../components/models/user";
 import { UserService } from "../components/services/user.service";
-import { MatTableDataSource } from "@angular/material";
+import { MatTableDataSource } from "@angular/material/table";
 import { Router } from "@angular/router";
-import { HttpClient } from "@angular/common/http";
+
 
 @Component({
   selector: "app-dashboard",
