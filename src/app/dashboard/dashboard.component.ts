@@ -1,17 +1,26 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { map } from "rxjs/operators";
 import { Breakpoints, BreakpointObserver } from "@angular/cdk/layout";
 import { User } from "../components/models/user";
 import { UserService } from "../components/services/user.service";
+import { MatTableDataSource } from "@angular/material/table";
 import { Router } from "@angular/router";
+
 
 @Component({
   selector: "app-dashboard",
   templateUrl: "./dashboard.component.html",
   styleUrls: ["./dashboard.component.css"],
+  
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
   currentNinja: User = new User();
+  displayedColumns: string[] = [
+    "firstName",
+    "lastName",
+    "username",
+    "email"
+  ];
 
   /** Based on the screen size, switch from standard to one column per row */
   // dashboard.component.js
@@ -21,17 +30,17 @@ export class DashboardComponent {
       if (matches) {
         return {
           columns: 1,
-          miniCard: { cols: 1, rows: 1 },
-          chart: { cols: 1, rows: 2 },
-          table: { cols: 1, rows: 4 },
+          miniCard: { cols: 4, rows: 1 },
+          chart: { cols: 4, rows: 3 },
+          table: { cols: 4, rows: 1 },
         };
       }
 
       return {
         columns: 4,
         table: { cols: 4, rows: 1 },
-        miniCard: { cols: 2, rows: 1 },
-        chart: { cols: 2, rows: 2 },
+        miniCard: { cols: 1, rows: 3 },
+        chart: { cols: 3, rows: 3 },
       };
     })
   );
@@ -53,4 +62,5 @@ export class DashboardComponent {
       });
     }
   }
+  
 }

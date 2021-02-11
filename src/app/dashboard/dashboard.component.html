@@ -7,14 +7,16 @@
         <app-card title="Card 9"><div>Table Content Here</div></app-card>
       </mat-grid-tile>
     
-    <mat-grid-tile *ngFor="let i of [1, 2]" [colspan]="( cardLayout | async )?.miniCard.cols"
-      [rowspan]="( cardLayout | async )?.miniCard.rows">
-      <app-card title="Card {{i}}"><div>Mini Card Content Here</div></app-card>
-    </mat-grid-tile>
+   
     
-    <mat-grid-tile *ngFor="let i of [5, 6]" [colspan]="( cardLayout | async )?.chart.cols"
+    <mat-grid-tile *ngFor="let i of [2]" [colspan]="( cardLayout | async )?.miniCard.cols"
+      [rowspan]="( cardLayout | async )?.miniCard.rows">
+      <app-card title="Card {{i}}"><div>User Profile Here</div></app-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile *ngFor="let i of [5]" [colspan]="( cardLayout | async )?.chart.cols"
       [rowspan]="( cardLayout | async )?.chart.rows">
-      <app-card title="Card {{i}}"><div>Chart Content Here</div></app-card>
+      <app-card title="Card {{i}}"><div>Ninja Skill Level Here</div></app-card>
     </mat-grid-tile>
   </mat-grid-list>
 
