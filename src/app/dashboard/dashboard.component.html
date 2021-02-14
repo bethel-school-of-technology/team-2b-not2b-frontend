@@ -1,10 +1,10 @@
 <!--dash.component.html-->
  <div class="grid-container">
-  <h1 class="mat-h1">Dashboard</h1>
+  <h1>Dashboard</h1>
   <mat-grid-list cols="{{ ( cardLayout | async )?.columns }}" rowHeight="200px">
       
       <mat-grid-tile [colspan]="( cardLayout | async )?.table.cols" [rowspan]="( cardLayout | async )?.table.rows">
-        <app-card title="Card 9"><div>Progress Bar</div></app-card>
+        <app-card title="Ninja Progress"><div><mat-progress-bar mode="determinate" value="40"></mat-progress-bar></div></app-card>
       </mat-grid-tile>
     
    
@@ -17,20 +17,18 @@
     <mat-grid-tile *ngFor="let i of [5]" [colspan]="( cardLayout | async )?.chart.cols"
       [rowspan]="( cardLayout | async )?.chart.rows">
 
-      <app-card title="Card {{i}}"><div>Ninja Skill Level Here</div></app-card>
-
-
       <app-card title="Card {{i}}">
-        <div *ngIf="tanjiroPath">
+        <div><app-skill-tanjiro></app-skill-tanjiro></div>
+        <div *ngIf="displayTanjiroContent">
           <div>
-            Reading tanjiro content
+            
           </div>
         </div>
-        <div *ngIf="nezukoPath">
+        <div *ngIf="displayNezukoContent">
           <div>
             Reading nezuko content
           </div>
-          <div *ngIf="kamadoPath">
+          <div *ngIf="displayKamadoContent">
             <div>
               Reading kamado content
             </div>
@@ -41,12 +39,3 @@
     </mat-grid-tile>
   </mat-grid-list>
 
-
-
-<!-- JOSHUA EDITS -->
-<mat-card>
-  <mat-card-title>Ninja Profile</mat-card-title>
-  <mat-card-subtitle>Tanjiro Clan</mat-card-subtitle>
-  <mat-card-content>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque enim non repellendus numquam, accusamus sint quibusdam, perferendis ratione, iusto corrupti laboriosam? Reprehenderit ullam deleniti ducimus cum? Quae, eligendi ea! Nostrum.</mat-card-content>
-  
-</mat-card>
