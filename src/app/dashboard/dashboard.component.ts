@@ -5,17 +5,28 @@ import { User } from "../components/models/user";
 import { UserService } from "../components/services/user.service";
 import { MatTableDataSource } from "@angular/material/table";
 import { Router } from "@angular/router";
+import { ProgressBarComponent } from './progress-bar.component';
+
+
 
 
 @Component({
-  selector: "app-dashboard",
-  templateUrl: "./dashboard.component.html",
+  selector: "app-dashboard", "app-progress-bar",
+  templateUrl: "./dashboard.component.html", "./progress-bar.component",
   styleUrls: ["./dashboard.component.css"],
   
 })
-export class DashboardComponent {
+
+
+export class DashboardComponent implements OnInit {
 
   currentNinja: User = new User();
+  displayedColumns: string[] = [
+    "firstName",
+    "lastName",
+    "username",
+    "email"
+  ];
 
   displayTanjiroContent: boolean = false;
   displayNezukoContent: boolean = false;
@@ -42,17 +53,17 @@ export class DashboardComponent {
       if (matches) {
         return {
           columns: 1,
-          miniCard: { cols: 1, rows: 1 },
-          chart: { cols: 1, rows: 2 },
-          table: { cols: 1, rows: 4 },
+          miniCard: { cols: 4, rows: 1 },
+          chart: { cols: 4, rows: 3 },
+          table: { cols: 4, rows: 1 },
         };
       }
 
       return {
         columns: 4,
         table: { cols: 4, rows: 1 },
-        miniCard: { cols: 2, rows: 1 },
-        chart: { cols: 2, rows: 2 },
+        miniCard: { cols: 1, rows: 3 },
+        chart: { cols: 3, rows: 3 },
       };
     })
   );
@@ -81,10 +92,17 @@ export class DashboardComponent {
       }
     }
     }
+
+  }
+
+  
+  
+
     
 
   // checkPathChoice(currentNinja: number) {
   //   console.log(this.currentNinja);
   // }
+
 
 }
