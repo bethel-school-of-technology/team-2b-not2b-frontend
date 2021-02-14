@@ -25,7 +25,7 @@ export class DashboardComponent {
   kamadoPath: number = this.currentNinja.pathChoice;
 
 
-  currentNinjaDataSource = new MatTableDataSource(this.currentNinja);
+  // currentNinjaDataSource = new MatTableDataSource(this.currentNinja);
   displayedColumns: string[] = [
     "firstName",
     "lastName",
