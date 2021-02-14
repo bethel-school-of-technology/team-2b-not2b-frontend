@@ -16,7 +16,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 
 
@@ -70,9 +70,12 @@ import { YouTubePlayerModule } from "@angular/youtube-player";
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
+    MatProgressBarModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

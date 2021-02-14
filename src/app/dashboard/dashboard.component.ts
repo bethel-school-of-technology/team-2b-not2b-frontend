@@ -5,14 +5,16 @@ import { User } from "../components/models/user";
 import { UserService } from "../components/services/user.service";
 import { MatTableDataSource } from "@angular/material/table";
 import { Router } from "@angular/router";
+import { ProgressBarComponent } from './progress-bar.component';
+
 
 
 @Component({
-  selector: "app-dashboard",
-  templateUrl: "./dashboard.component.html",
+  selector: "app-dashboard", "app-progress-bar",
+  templateUrl: "./dashboard.component.html", "./progress-bar.component",
   styleUrls: ["./dashboard.component.css"],
-  
 })
+
 export class DashboardComponent implements OnInit {
   currentNinja: User = new User();
   displayedColumns: string[] = [
@@ -62,5 +64,7 @@ export class DashboardComponent implements OnInit {
       });
     }
   }
+
+  
   
 }
