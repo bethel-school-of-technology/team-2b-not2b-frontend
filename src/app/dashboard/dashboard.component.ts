@@ -1,24 +1,37 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { map } from "rxjs/operators";
 import { Breakpoints, BreakpointObserver } from "@angular/cdk/layout";
 import { User } from "../components/models/user";
 import { UserService } from "../components/services/user.service";
+import { MatTableDataSource } from "@angular/material/table";
 import { Router } from "@angular/router";
+
 
 @Component({
   selector: "app-dashboard",
   templateUrl: "./dashboard.component.html",
   styleUrls: ["./dashboard.component.css"],
+  
 })
 export class DashboardComponent {
 
   currentNinja: User = new User();
+
   displayTanjiroContent: boolean = false;
   displayNezukoContent: boolean = false;
   displayKamadoContent: boolean = false;
   tanjiroPath: number = this.currentNinja.pathChoice;
   nezukoPath: number = this.currentNinja.pathChoice;
   kamadoPath: number = this.currentNinja.pathChoice;
+
+
+  currentNinjaDataSource = new MatTableDataSource(this.currentNinja);
+  displayedColumns: string[] = [
+    "firstName",
+    "lastName",
+    "username",
+    "email"
+  ];
 
 
   /** Based on the screen size, switch from standard to one column per row */
