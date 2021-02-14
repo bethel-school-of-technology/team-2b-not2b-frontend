@@ -7,5 +7,20 @@ mat-form-field {
     width: 100%;
 }
 
+h1{
+    text-align: center;
+    color: white;
+}
+
+.example-card {
+    max-width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+    background-color: #77ff00;
+    color: #000000;
+}
 
 

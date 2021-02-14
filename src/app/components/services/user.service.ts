@@ -26,7 +26,7 @@ export class UserService {
   }
 
   // GET request to /api/users/dashboard
-  // Need Authorization header with toke from login
+  // Need Authorization header with token from login
   getNinjaInfo(): Observable<any>{
     let myHeaders = {
       Authorization: localStorage.getItem("ninjaToken")

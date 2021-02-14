@@ -14,7 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 
@@ -32,7 +32,7 @@ import { CardComponent } from './card/card.component';
 import { SkillTanjiroComponent } from './components/skill-tanjiro/skill-tanjiro.component';
 import { SkillNezukoComponent } from './components/skill-nezuko/skill-nezuko.component';
 import { SkillKamadoComponent } from './components/skill-kamado/skill-kamado.component';  
-import { YouTubePlayerModule } from "@angular/youtube-player";
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 
 
@@ -74,8 +74,7 @@ import { YouTubePlayerModule } from "@angular/youtube-player";
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    
-  
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

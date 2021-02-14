@@ -14,6 +14,8 @@ import { UserService } from '../../services/user.service';
 export class SignupPageComponent implements OnInit {
 
   newNinja: User = new User();
+  partOne: boolean = true;
+  partTwo: boolean = false;
 
   constructor(private ninjaUserService: UserService, private myRouter: Router) {}
 
@@ -21,20 +23,44 @@ export class SignupPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  signup() {
+  signupPartOne(){
+    console.log(this.newNinja);
+    this.partOne = false;
+    this.partTwo = true;
+    // this.ngOnInit();
+  }
+
+  signupPartTwo(choice: number){
+    this.newNinja.pathChoice = choice;
     console.log(this.newNinja)
     this.ninjaUserService.signupUser(this.newNinja).subscribe(ninjaResponseObject => {
       console.log(ninjaResponseObject);
       if(ninjaResponseObject.status === 200){
         // Successful Signup
         window.alert(ninjaResponseObject.message);
-        localStorage.setItem("ninjaToken", ninjaResponseObject.token);
-        this.myRouter.navigate(["/decision-page"]);
+        // localStorage.setItem("ninjaToken", ninjaResponseObject.token);
+        this.myRouter.navigate(["/login-page"]);
       } else {
         // Unsuccessful Signup
         window.alert(ninjaResponseObject.message);
       }
     })
   }
+
+  // signup() {
+  //   console.log(this.newNinja)
+  //   this.ninjaUserService.signupUser(this.newNinja).subscribe(ninjaResponseObject => {
+  //     console.log(ninjaResponseObject);
+  //     if(ninjaResponseObject.status === 200){
+  //       // Successful Signup
+  //       window.alert(ninjaResponseObject.message);
+  //       localStorage.setItem("ninjaToken", ninjaResponseObject.token);
+  //       this.myRouter.navigate(["/decision-page"]);
+  //     } else {
+  //       // Unsuccessful Signup
+  //       window.alert(ninjaResponseObject.message);
+  //     }
+  //   })
+  // }
 
 }
