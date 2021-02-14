@@ -5,6 +5,7 @@ export class User {
     email: string;
     username: string;
     password: string;
+    pathChoice: number;
     
     constructor(){
         this.firstName = "";
@@ -12,5 +13,6 @@ export class User {
         this.username = "";
         this.email = "";
         this.password = "";
+        this.pathChoice = 1;
     }
 }

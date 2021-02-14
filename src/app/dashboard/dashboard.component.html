@@ -14,7 +14,25 @@
     
     <mat-grid-tile *ngFor="let i of [5, 6]" [colspan]="( cardLayout | async )?.chart.cols"
       [rowspan]="( cardLayout | async )?.chart.rows">
-      <app-card title="Card {{i}}"><div>Chart Content Here</div></app-card>
+
+      <app-card title="Card {{i}}">
+        <div *ngIf="tanjiroPath">
+          <div>
+            Reading tanjiro content
+          </div>
+        </div>
+        <div *ngIf="nezukoPath">
+          <div>
+            Reading nezuko content
+          </div>
+          <div *ngIf="kamadoPath">
+            <div>
+              Reading kamado content
+            </div>
+          </div>
+        </div>
+      </app-card>
+
     </mat-grid-tile>
   </mat-grid-list>
 

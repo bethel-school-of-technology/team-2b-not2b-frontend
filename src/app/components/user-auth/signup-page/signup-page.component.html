@@ -1,39 +1,56 @@
-<mat-card>
-  <mat-card-title>Sign Up</mat-card-title>
-  <form (ngSubmit)="signup()">
+<div *ngIf="partOne">
+  <mat-card>
+    <mat-card-title>Sign Up</mat-card-title>
+    <form (ngSubmit)="signupPartOne()">
+      <mat-form-field appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input matInput name="firstName" type="text" placeholder="First Name" [(ngModel)]="newNinja.firstName" required />
+        <!-- <mat-error *ngIf="firstNameInput.invalid">Please enter a valid Username</mat-error> -->
+      </mat-form-field>
 
-    <mat-form-field appearance="outline">
-      <mat-label>First Name</mat-label>
-      <input matInput name="firstName" type="text" placeholder="First Name" [(ngModel)]="newNinja.firstName" required>
-      <!-- <mat-error *ngIf="firstNameInput.invalid">Please enter a valid Username</mat-error> -->
-    </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input matInput name="lastName" type="text" placeholder="Last Name" [(ngModel)]="newNinja.lastName" required />
+        <!-- <mat-error *ngIf="lastNameInput.invalid">Please enter your last name</mat-error> -->
+      </mat-form-field>
 
-    <mat-form-field appearance="outline">
-      <mat-label>Last Name</mat-label>
-      <input matInput name="lastName" type="text" placeholder="Last Name" [(ngModel)]="newNinja.lastName" required>
-      <!-- <mat-error *ngIf="lastNameInput.invalid">Please enter your last name</mat-error> -->
-    </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput name="email" type="email" placeholder="E-mail" [(ngModel)]="newNinja.email" required email />
+        <!-- <mat-error *ngIf="emailInput.invalid">Please enter a valid Username</mat-error> -->
+      </mat-form-field>
 
-    <mat-form-field appearance="outline">
-      <mat-label>Email</mat-label>
-      <input matInput name="email" type="email" placeholder="E-mail" [(ngModel)]="newNinja.email" required email>
-      <!-- <mat-error *ngIf="emailInput.invalid">Please enter a valid Username</mat-error> -->
-    </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>UserName</mat-label>
+        <input matInput name="username" type="text" placeholder="UserName" [(ngModel)]="newNinja.username" required />
+        <!-- <mat-error *ngIf="usernameInput.invalid">Please enter a username</mat-error> -->
+      </mat-form-field>
 
-    <mat-form-field appearance="outline">
-      <mat-label>UserName</mat-label>
-      <input matInput name="username" type="text" placeholder="UserName" [(ngModel)]="newNinja.username" required>
-      <!-- <mat-error *ngIf="usernameInput.invalid">Please enter a username</mat-error> -->
-    </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" name="password" placeholder="Password" [(ngModel)]="newNinja.password" required />
+        <!-- <mat-error *ngIf="passwordInput.invalid">Please enter a valid password.</mat-error> -->
+      </mat-form-field>
 
-    <mat-form-field appearance="outline">
-      <mat-label>Password</mat-label>
-      <input matInput type="password" name="password" placeholder="Password" [(ngModel)]="newNinja.password" required />
-      <!-- <mat-error *ngIf="passwordInput.invalid">Please enter a valid password.</mat-error> -->
-    </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Sign Up</button>
+    </form>
+  </mat-card>
+</div>
 
-    <button mat-raised-button color="primary" type="submit">Sign Up</button>
-  </form>
-</mat-card>
+<div *ngIf="partTwo">
 
+  <h1>Choose Your Path</h1>
 
+  <mat-card class="example-card" (click)="signupPartTwo(1)">
+    <mat-card-title>Tanjiro</mat-card-title>
+  </mat-card>
+
+  <mat-card class="example-card" (click)="signupPartTwo(2)">
+    <mat-card-title>Nezuko</mat-card-title>
+  </mat-card>
+
+  <mat-card class="example-card" (click)="signupPartTwo(3)">
+    <mat-card-title>Kamado</mat-card-title>
+  </mat-card>
+  
+</div>
