@@ -5,14 +5,14 @@ import { User } from "../components/models/user";
 import { UserService } from "../components/services/user.service";
 import { MatTableDataSource } from "@angular/material/table";
 import { Router } from "@angular/router";
-import { ProgressBarComponent } from './progress-bar.component';
+// import { ProgressBarComponent } from './progress-bar.component';
 
 
 
 
 @Component({
-  selector: "app-dashboard", "app-progress-bar",
-  templateUrl: "./dashboard.component.html", "./progress-bar.component",
+  selector: "app-dashboard",
+  templateUrl: "./dashboard.component.html", 
   styleUrls: ["./dashboard.component.css"],
   
 })
@@ -21,6 +21,7 @@ import { ProgressBarComponent } from './progress-bar.component';
 export class DashboardComponent implements OnInit {
 
   currentNinja: User = new User();
+
   displayedColumns: string[] = [
     "firstName",
     "lastName",
@@ -37,13 +38,6 @@ export class DashboardComponent implements OnInit {
 
 
   // currentNinjaDataSource = new MatTableDataSource(this.currentNinja);
-  displayedColumns: string[] = [
-    "firstName",
-    "lastName",
-    "username",
-    "email"
-  ];
-
 
   /** Based on the screen size, switch from standard to one column per row */
   // dashboard.component.js
@@ -74,23 +68,27 @@ export class DashboardComponent implements OnInit {
     if (!localStorage.getItem("ninjaToken")) {
       window.alert("You are not logged in");
       this.myRouter.navigate(["/login-page"]);
-    } else {
+    } 
+    else {
       this.ninjaUserService.getNinjaInfo().subscribe((ninjaResponseObject) => {
         console.log(ninjaResponseObject);
         this.currentNinja = ninjaResponseObject.user;
-        
+        console.log(this.currentNinja);
+
+        if(this.currentNinja.pathChoice === 1){
+          this.displayTanjiroContent = true;
+          console.log(this.currentNinja.pathChoice);
+        } else if(this.currentNinja.pathChoice === 2){
+          this.displayNezukoContent = true;
+          console.log(this.nezukoPath);
+        } else {
+          this.displayKamadoContent = true;
+          console.log(this.kamadoPath);
+        }
       });
-      if(this.currentNinja.pathChoice === 1){
-        this.displayTanjiroContent = true;
-        console.log(this.currentNinja.pathChoice);
-      } else if(this.currentNinja.pathChoice === 2){
-        this.displayNezukoContent = true;
-        console.log(this.nezukoPath);
-      } else {
-        this.displayKamadoContent = true;
-        console.log(this.kamadoPath);
-      }
+      
     }
+
     }
 
   }
@@ -105,4 +103,4 @@ export class DashboardComponent implements OnInit {
   // }
 
 
-}
+
