@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  getToken() {
+    return localStorage.getItem("ninjaToken");
+  }
+
+  logout() {
+    localStorage.clear();
+  }
+
   constructor() { }
 
   ngOnInit(): void {
