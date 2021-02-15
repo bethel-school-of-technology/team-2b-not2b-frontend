@@ -8,7 +8,10 @@
     background-color: #77ff00;
 } */
 
-
+@font-face {
+    font-family: 'bangers';
+    src: url(/src/assets/fonts/Bangers-Regular.ttf)format('truetype');
+  }
 
 main {
     margin-top: 1rem;
@@ -16,10 +19,12 @@ main {
 
 mat-card {
     margin: auto;
+    
 }
 
 mat-card-content { 
     text-align: center;
+    
 }
 
 button {

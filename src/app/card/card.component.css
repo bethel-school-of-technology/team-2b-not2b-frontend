@@ -11,6 +11,7 @@
     left: 15px;
     right: 15px;
     bottom: 15px;
+    background-color: grey;
  }
  
  
@@ -28,4 +29,5 @@
  mat-card {
     display: flex;
     flex-direction: column;
+    background-image: linear-gradient(white, grey);
  }

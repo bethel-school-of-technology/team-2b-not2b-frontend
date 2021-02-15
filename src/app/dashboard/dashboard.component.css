@@ -1,5 +1,13 @@
+@font-face {
+  font-family: 'bangers';
+  src: url(/src/assets/fonts/Bangers-Regular.ttf)format('truetype');
+}
+
+
 .grid-container {
   margin: 20px;
+  margin-top: 100px;
+  font-family: 'Bangers';
 }
 
 .dashboard-card {
@@ -8,6 +16,7 @@
   left: 15px;
   right: 15px;
   bottom: 15px;
+  font-family: 'Bangers';
 }
 
 .more-button {
@@ -18,17 +27,61 @@
 
 .dashboard-card-content {
   text-align: center;
+  font-family: 'Bangers';
 }
 
 mat-card {
   width: 80%;
   margin: auto;
+  font-family: 'Bangers';
 }
+
+.mat-display-4 {
+  color: #77ff00;
+  font-kerning: inherit;
+  font-family: 'Bangers';
+}
+
 
 h1{
   text-align: center;
-  color: white;
+  color: rgb(41, 39, 39);
 }
+
+h3{
+  text-align: center;
+  color: rgb(41, 39, 39);
+  font-family: 'Bangers';
+}
+
+p{
+  text-align: center;
+  color: whitesmoke;
+  font-family: 'Bangers';
+  font-size: 2em;
+}
+
+h2{
+  text-align: center;
+  color: rgb(41, 39, 39);
+  font-family: 'Bangers';
+  font-size: 3em;
+}
+
+h3{
+  text-align: center;
+  color: #4c494b;
+  font-family: 'Bangers';
+  font-size: 2em;
+}
+
+h4{
+  text-align: center;
+  color: rgb(41, 39, 39);
+  font-family: 'Bangers';
+  font-size: 1.5em;
+}
+
 
 ::ng-deep .mat-progress-bar-fill::after {
   background-color: #77ff00;
@@ -41,5 +94,11 @@ h1{
 ::ng-deep .mat-progress-bar {
   border-radius: 2px;
 }
+
+.center {
+  text-align: center;
+}
+
+
 
 
