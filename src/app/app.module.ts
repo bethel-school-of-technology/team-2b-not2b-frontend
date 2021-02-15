@@ -24,10 +24,10 @@ import { AppComponent } from './app.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { LoginPageComponent } from './components/user-auth/login-page/login-page.component';
 import { SignupPageComponent } from './components/user-auth/signup-page/signup-page.component';
-import { NavComponent } from './nav/nav.component';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './components/header/header.component';
-import { DecisionPageComponent } from './components/decision-page/decision-page.component';
+
 import { CardComponent } from './card/card.component';
 import { SkillTanjiroComponent } from './components/skill-tanjiro/skill-tanjiro.component';
 import { SkillNezukoComponent } from './components/skill-nezuko/skill-nezuko.component';
@@ -42,10 +42,8 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     LandingPageComponent,
     LoginPageComponent,
     SignupPageComponent,
-    NavComponent,
     DashboardComponent,
     HeaderComponent,
-    DecisionPageComponent,
     CardComponent,
     SkillTanjiroComponent,
     SkillNezukoComponent,

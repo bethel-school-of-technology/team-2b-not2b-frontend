@@ -1,6 +1,11 @@
 <mat-toolbar color="primary" routerLink="/landing-page">
-    <img src="../../../assets/images/header_100.png">
+  
+    <img src="../../../assets/images/header_100.png" />
+  
+  <span class="logout">
+    
+      <a *ngIf="getToken()"><button mat-raised-button style="float:right;" (click)="logout()">Logout</button></a>
+    
+  </span>
 </mat-toolbar>
 <br />
-
-<router-outlet></router-outlet>
