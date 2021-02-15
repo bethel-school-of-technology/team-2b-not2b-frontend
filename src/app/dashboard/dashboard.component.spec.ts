@@ -8,8 +8,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 
 
+
 import { DashboardComponent } from './dashboard.component';
-import { ProgressBarComponent } from './progress-bar.component';
+//import { ProgressBarComponent } from './progress-bar.component';
 
 describe('TanjiroComponent', () => {
   let component: DashboardComponent;
@@ -39,4 +40,11 @@ describe('TanjiroComponent', () => {
   it('should compile', () => {
     expect(component).toBeTruthy();
   });
+
+
+
+
+
+
+
 });
