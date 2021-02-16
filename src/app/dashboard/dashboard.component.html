@@ -1,54 +1,53 @@
-
 <!--dash.component.html-->
 
-<div><h1 class="mat-display-4">Welcome to the Dojo</h1><p>My Shinobi Dashboard</p></div>
+<div>
+  <h1 class="mat-display-4">Welcome to the Dojo</h1>
+  <p>My Shinobi Dashboard</p>
+</div>
 <div class="grid-container">
-  <mat-grid-list cols="{{ ( cardLayout | async )?.columns }}" rowHeight="200px">
-      
-      <mat-grid-tile [colspan]="( cardLayout | async )?.table.cols" [rowspan]="( cardLayout | async )?.table.rows">
-        <app-card title=""><h2> Shinobi Progress </h2><br><br><div><mat-progress-bar mode="determinate" value="40"></mat-progress-bar></div></app-card>
-      </mat-grid-tile>
-    
-   
-    
-    <mat-grid-tile *ngFor="let i of [2]" [colspan]="( cardLayout | async )?.miniCard.cols"
-      [rowspan]="( cardLayout | async )?.miniCard.rows">
+  <mat-grid-list cols="{{ (cardLayout | async)?.columns }}" rowHeight="200px">
+    <mat-grid-tile [colspan]="(cardLayout | async)?.table.cols" [rowspan]="(cardLayout | async)?.table.rows">
+      <app-card title="">
+        <h2>Shinobi Progress</h2>
+        <br />
+        <div>
+          <mat-progress-bar mode="determinate" value="40">
+        </mat-progress-bar>
+        </div>
+      </app-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile *ngFor="let i of [2]" [colspan]="(cardLayout | async)?.miniCard.cols" [rowspan]="(cardLayout | async)?.miniCard.rows">
       <app-card title="">
         <div>
-          <img mat-card-avatar src="assets/images/avatar.png" alt="avatar"><br><br>
-          <mat-card-content><h2> Konnichiwa, {{ this.currentNinja.firstName }}</h2></mat-card-content><br>
-          <h4>You Have Entered the Dojo as </h4><br><h3>{{ this.currentNinja.username }}</h3><br>
-          <br>
-          <h4>You Have Chosen the Way of the </h4><br>
-          <img mat-card-lg-image src="assets/images/tanjirohero.png" alt="tanjirohero">
-
-
+          <img mat-card-avatar src="assets/images/avatar.png" alt="avatar"/>
+          <br />
+          <br />
+          <mat-card-content>
+            <h2>Konnichiwa, {{ this.currentNinja.firstName }}</h2>
+          </mat-card-content>
+          <br />
+          <h4>You Have Entered the Dojo as</h4>
+          <br />
+          <h3>{{ this.currentNinja.username }}</h3>
+          <br />
+          <h4>You Have Chosen the Way of the</h4>
+          <br />
+          <img *ngIf="displayTanjiroContent" mat-card-lg-image src="assets/images/tanjirohero.png" alt="tanjirohero" />
+          <img *ngIf="displayNezukoContent" mat-card-lg-image src="assets/images/nezukohero.png" alt="nezukohero" />
+          <img *ngIf="displayKamadoContent" mat-card-lg-image src="assets/images/kamadohero.png" alt="kamadohero" />
         </div>
       </app-card>
     </mat-grid-tile>
 
-    <mat-grid-tile *ngFor="let i of [5]" [colspan]="( cardLayout | async )?.chart.cols"
-      [rowspan]="( cardLayout | async )?.chart.rows">
-
-      <app-card title=""><h2>Training + Skillset</h2><br><br>
-        <div><app-skill-tanjiro></app-skill-tanjiro></div>
-        <div *ngIf="displayTanjiroContent">
-          <div>
-            
-          </div>
-        </div>
-        <div *ngIf="displayNezukoContent">
-          <div>
-            Reading nezuko content
-          </div>
-          <div *ngIf="displayKamadoContent">
-            <div>
-              Reading kamado content
-            </div>
-          </div>
-        </div>
+    <mat-grid-tile *ngFor="let i of [5]" [colspan]="(cardLayout | async)?.chart.cols" [rowspan]="(cardLayout | async)?.chart.rows">
+      <app-card title="">
+        <h2>Training + Skillset</h2>
+        <br /><br />
+        <div *ngIf="displayTanjiroContent"><app-skill-tanjiro></app-skill-tanjiro></div>
+        <div *ngIf="displayNezukoContent"><app-skill-nezuko></app-skill-nezuko></div>
+        <div *ngIf="displayKamadoContent"><app-skill-kamado></app-skill-kamado></div>
       </app-card>
-
     </mat-grid-tile>
   </mat-grid-list>
-
+</div>

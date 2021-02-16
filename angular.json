@@ -27,8 +27,7 @@
             ],
             "styles": [
 
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "src/styles.css", "src/assets/fonts", "src/assets/images"
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css", "src/styles.css"
             ],
             "scripts": []
           },
@@ -93,8 +92,7 @@
               "src/assets/images"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "src/styles.css", "src/assets/fonts", "src/assets/images"
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css", "src/styles.css"
             ],
             "scripts": []
           }

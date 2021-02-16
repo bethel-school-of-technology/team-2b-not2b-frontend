@@ -6,10 +6,6 @@ import { UserService } from "../components/services/user.service";
 import { Router } from "@angular/router";
 // import { ProgressBarComponent } from './progress-bar.component';
 
-
-
-
-
 @Component({
   selector: "app-dashboard",
   templateUrl: "./dashboard.component.html", 
@@ -32,12 +28,6 @@ export class DashboardComponent implements OnInit {
   displayTanjiroContent: boolean = false;
   displayNezukoContent: boolean = false;
   displayKamadoContent: boolean = false;
-  tanjiroPath: number = this.currentNinja.pathChoice;
-  nezukoPath: number = this.currentNinja.pathChoice;
-  kamadoPath: number = this.currentNinja.pathChoice;
-
-
-  // currentNinjaDataSource = new MatTableDataSource(this.currentNinja);
 
   /** Based on the screen size, switch from standard to one column per row */
   // dashboard.component.js
@@ -73,17 +63,23 @@ export class DashboardComponent implements OnInit {
       this.ninjaUserService.getNinjaInfo().subscribe((ninjaResponseObject) => {
         console.log(ninjaResponseObject);
         this.currentNinja = ninjaResponseObject.user;
-        console.log(this.currentNinja);
+        // console.log(this.currentNinja);
 
         if(this.currentNinja.pathChoice === 1){
           this.displayTanjiroContent = true;
-          console.log(this.currentNinja.pathChoice);
+          this.displayNezukoContent = false;
+          this.displayKamadoContent = false;
+          // console.log(this.currentNinja.pathChoice);
         } else if(this.currentNinja.pathChoice === 2){
+          this.displayTanjiroContent = false;
           this.displayNezukoContent = true;
-          console.log(this.nezukoPath);
-        } else {
+          this.displayKamadoContent = false;
+          // console.log(this.nezukoPath);
+        } else if(this.currentNinja.pathChoice === 3){
+          this.displayTanjiroContent = false;
+          this.displayNezukoContent = false;
           this.displayKamadoContent = true;
-          console.log(this.kamadoPath);
+          // console.log("this.kamadoPath");
         }
       });
       
@@ -92,15 +88,4 @@ export class DashboardComponent implements OnInit {
     }
 
   }
-
-  
-  
-
-    
-
-  // checkPathChoice(currentNinja: number) {
-  //   console.log(this.currentNinja);
-  // }
-
-
 

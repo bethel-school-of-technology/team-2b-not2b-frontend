@@ -1,9 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+// import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
-// import { NgForm } from '@angular/forms';
-// import { AuthService } from '../auth.service';
+
 
 @Component({
   selector: 'app-login-page',
@@ -18,13 +17,6 @@ export class LoginPageComponent implements OnInit {
   }
 
   constructor(private ninjaUserService: UserService, private myRouter: Router) { }
-
-  // onLogin(form: NgForm) {
-  //   if(form.invalid) {
-  //     return;
-  //   }
-  //   this.authService.userLogin(form.value.email, form.value.password);
-  // }
 
   ngOnInit() {
   }

@@ -10,5 +10,5 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 @font-face {
     font-family: 'bangers';
-    src: url(/src/assets/fonts/Bangers-Regular.ttf)format('truetype');
+    src: url(../src/assets/fonts/Bangers-Regular.ttf)format('truetype');
   }
