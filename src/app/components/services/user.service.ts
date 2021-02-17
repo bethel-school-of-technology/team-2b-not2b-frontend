@@ -10,7 +10,7 @@ export class UserService {
 
   constructor(private ninjaHttp: HttpClient) { }
 
-  serverUserURL: string = "http://localhost:5000/api/users/";
+  serverUserURL: string = "/backend/api/users/";
 
   // POST request to /api/users/singup-page
   // provide new user data 
